@@ -8,11 +8,6 @@ public class CommandLineBuilderTests
     [Fact]
     public void Build_ForRevitProductOnly_ReturnsCorrectCommandLine()
     {
-        var ActivityId = "act";
-        var InputDocParameterName = "dpc";
-        var a =
-            $"$(engine.path)\\InventorCoreConsole.exe /al \"$(appbundles[{ActivityId}].path)\" /i \"$(args[{InputDocParameterName}].path)\"";
-
         var product = Product.Revit;
         
         var commandLine =  CommandLineBuilder
